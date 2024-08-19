@@ -1,0 +1,26 @@
+
+<link rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/home_subform.css') }}">
+    <div class="container">
+        <header class="header">
+            <h1>Profile</h1>
+            <p>I'm webdeveloper</p>
+        </header>
+        
+        <div class="profile-container">
+            <section class="about-me">
+                <h2>ABOUT ME</h2>
+                <p>Hi! I am Mohammadreza Malekjan, a webdeveloper an allround web developer. If you have a project or</p>
+            </section>
+
+            <section class="profile-image">
+                <img  src="{{ url_for('static',filename='images/profile.jpg') }}" alt="Profile Picture">
+            </section>
+            
+            <section class="details">
+                <h2>DETAILS</h2>
+                <p><strong>Name:</strong> Mohammadreza Malekjan</p>
+                <p><strong>DoB:</strong> 1998</p>
+                <p><strong>Location:</strong> Iran, Tehran, Rey</p>
+            </section>
+        </div>
+    </div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<link rel='stylesheet' type='text/css' href= "{{ url_for('static',filename='styles/home.css') }}">
+<html>
+<head>
+<title>Mohammadreza Malekjan Website</title>
+<meta charset="UTF-8">
+<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!--div class="w3-content"-->
+<div class="w3-auto">
+<header class="w3-panel w3-center w3-opacity" >
+  <h1>Mohammadreza Malekjan</h1>
+  
+  <div class="w3-padding-16">
+      <a href="home" class="w3-bar-item w3-button">Home</a>
+      <button class="w3-bar-item w3-button" onclick="handleClick(1)" method="post">Contact</button>
+
+      {% if user_authorized %}
+      <button class="w3-bar-item w3-button" onclick="handleClick(2)" method="post">Resume</button>
+      <a href="logout" class="w3-bar-item w3-button" >Logout</a>
+      {% else %}
+      <a href="login" class="w3-bar-item w3-button">Login</a>
+      {% endif %}
+    </div>
+</div>
+</header>
+<div class=" w3-transparent ">
+{% if sub_page %}
+{% include sub_page %}
+{% endif %}
+</div>
+
+
+
+<!-- Photo Grid -->
+<!--div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
+  <div >
+  </div>
+
+  <div>
+  </div>
+</div-->
+</div>
+
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-xlarge"> 
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+</body>
+
+<script>
+    function handleClick(buttonId) {
+            // Redirect to the Flask route with the button ID as a URL parameter
+            window.location.href = '/home?button_id=' + buttonId;
+        }
+</script>
+
+</html>

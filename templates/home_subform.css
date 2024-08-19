@@ -1,0 +1,101 @@
+body {
+    font-family: "Raleway", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #555;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    margin-right: 10px;
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Ensure this matches the width */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.about-me,
+.details {
+    width: 30%;
+    text-align: left;
+}
+
+.about-me h2,
+.details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-me p,
+.details p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-me .image-credit {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.about-me .image-credit a {
+    color: #000;
+    text-decoration: none;
+}
+
+.profile-image {
+    width: 10%;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.details p strong {
+    display: inline-block;
+    width: 80px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+
+.social-media a:hover {
+    color: #000;
+}
